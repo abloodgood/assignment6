@@ -6,22 +6,22 @@
     </head>
     <body>
         <div id="app">
-            <img v-on:hover="goBack" :src="img1" alt="Magic Kingdom at Christmas" />
-            <img v-on:hover="goBack" :src="img2" alt="Moosehead Lake in Summer" />
+            <img :src="img1" alt="Magic Kingdom at Christmas" />
+            <img :src="img2" alt="Moosehead Lake in Summer" />
         </div>
         
         <!--Include Vue-->
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         
-        <--Create Vue instance-->
+        <!--Create Vue instance-->
         <script>
             var app = new Vue({
                 el: '#app',
                 data: {
-                    img1 : "Media/MK_Christmas.jpg",
-                    img1Back : 'Media/MK_Halloween.png',
-                    img2 : 'ML_Summer.jpg',
-                    img2Back : 'ML_Fall.jpg',
+                    img1 : "./Media/MK_Christmas.jpg",
+                    img1Back : './Media/MK_Halloween.png',
+                    img2 : './Media/ML_Summer.jpg',
+                    img2Back : './Media/ML_Fall.jpg',
                     img3 : '',
                     img3Back : '',
                     img4 : '',
