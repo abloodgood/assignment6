@@ -6,10 +6,8 @@
     </head>
     <body>
         <div id="app">
-            <h1>Course Name</h1>
-            
-            <!--Bind link property from Vue instance-->
-            <a v-bind:href="link">View Course Details</a>
+            <img v-on:hover="goBack" :src="img1" alt="Magic Kingdom at Christmas" />
+            <img v-on:hover="goBack" :src="img2" alt="Moosehead Lake in Summer" />
         </div>
         
         <!--Include Vue-->
@@ -20,9 +18,20 @@
             var app = new Vue({
                 el: '#app',
                 data: {
-                    courseName: 'CS601: Web Application Development',
-                    link: 'http://www.bu.edu/csmet/academic-programs/courses/cs601/'
+                    img1 : "Media/MK_Christmas.jpg",
+                    img1Back : 'Media/MK_Halloween.png',
+                    img2 : 'ML_Summer.jpg',
+                    img2Back : 'ML_Fall.jpg',
+                    img3 : '',
+                    img3Back : '',
+                    img4 : '',
+                    img4Back : ''
+                },
+            methods: {
+                goBack: function() {
+                    
                 }
+            }
             })
          </script>
     </body>
