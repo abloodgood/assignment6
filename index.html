@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="app">
-            <img :src="img1" alt="Magic Kingdom at Christmas" />
+            <img v-on:hover="goBack" :src="img1" alt="Magic Kingdom at Christmas" />
             <img :src="img2" alt="Moosehead Lake in Summer" />
         </div>
         
@@ -29,7 +29,7 @@
                 },
             methods: {
                 goBack: function() {
-                    
+                    this.img1 = this.img1Back;
                 }
             }
             })
