@@ -10,8 +10,8 @@
             <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
             <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
 
-            <img v-if="!hover" @mouseover="hover = !hover" :src="img2" alt="Moosehead Lake in Summer"/>
-            <img v-else @mouseleave="hover = !hover" :src="img2Back" alt="Moosehead Lake in Fall"/>
+            <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Summer"/>
+            <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
         </div>
         
         <!--Include Vue-->
@@ -30,7 +30,8 @@
                     img3Back : '',
                     img4 : '',
                     img4Back : '',
-                    hover : false
+                    hover : false,
+                    hover2 : false
                 }
             })
          </script>
