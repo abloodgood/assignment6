@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="app">
-            <img v-on:hover="goBack" :src="img1" alt="Magic Kingdom at Christmas" />
+            <img :src="img1" @mouseover="img1 = img1Back" alt="Magic Kingdom at Christmas"/>
             <img :src="img2" alt="Moosehead Lake in Summer" />
         </div>
         
@@ -26,12 +26,7 @@
                     img3Back : '',
                     img4 : '',
                     img4Back : ''
-                },
-            methods: {
-                goBack: function() {
-                    this.img1 = './Media/MK_Halloween.png';
                 }
-            }
             })
          </script>
     </body>
