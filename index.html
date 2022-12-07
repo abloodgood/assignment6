@@ -7,14 +7,19 @@
     </head>
     <body>
         <div id="app">
-            <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
-            <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
+            <div class="image-wrapper">
+                <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
+                <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
 
-            <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Summer"/>
-            <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
+                <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Summer"/>
+                <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
 
-            <img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/>
-            <img v-else @mouseleave="hover3 = !hover3" :src="img3Back" alt="London in Summer"/>
+                <img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/>
+                <img v-else @mouseleave="hover3 = !hover3" :src="img3Back" alt="London in Summer"/>
+
+                <img v-if="!hover4" @mouseover="hover4 = !hover4" :src="img4" alt="Germany at Christmas"/>
+                <img v-else @mouseleave="hover4 = !hover4" :src="img4Back" alt="Germany in Summer"/>
+            </div>
         </div>
         
         <!--Include Vue-->
@@ -31,8 +36,8 @@
                     img2Back : './Media/ML_Fall.jpg',
                     img3 : './Media/london_christmas.jpg',
                     img3Back : './Media/london_summer.jpg',
-                    img4 : '',
-                    img4Back : '',
+                    img4 : './Media/GCM_Christmas.jpg',
+                    img4Back : './Media/GCM_Summer.jpg',
                     hover : false,
                     hover2 : false,
                     hover3 : false,
