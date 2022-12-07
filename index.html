@@ -12,6 +12,9 @@
 
             <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Summer"/>
             <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
+
+            <img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/>
+            <img v-else @mouseleave="hover3 = !hover3" :src="img3Back" alt="London in Summer"/>
         </div>
         
         <!--Include Vue-->
@@ -26,12 +29,14 @@
                     img1Back : './Media/MK_Halloween.png',
                     img2 : './Media/ML_Summer.jpg',
                     img2Back : './Media/ML_Fall.jpg',
-                    img3 : '',
-                    img3Back : '',
+                    img3 : 'london_christmas.jpg',
+                    img3Back : 'london_summer.jpg',
                     img4 : '',
                     img4Back : '',
                     hover : false,
-                    hover2 : false
+                    hover2 : false,
+                    hover3 : false,
+                    hover4 : false
                 }
             })
          </script>
