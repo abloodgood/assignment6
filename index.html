@@ -8,10 +8,9 @@
         <div id="app">
             <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
             <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
-           <!-- <div id="pictures">
-                <img @mouseover="hover = !hover" @mouseleave="hover = false" :src="img1" alt="Magic Kingdom at Christmas"/>
-                <img @mouseover="hover = !hover" @mouseleave="hover = false" :src="img2" alt="Moosehead Lake in Summer" />
-            </div> -->
+
+            <img v-if="!hover" @mouseover="hover = !hover" :src="img2" alt="Moosehead Lake in Summer"/>
+            <img v-else @mouseleave="hover = !hover" :src="img2Back" alt="Moosehead Lake in Fall"/>
         </div>
         
         <!--Include Vue-->
