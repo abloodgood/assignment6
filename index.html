@@ -6,8 +6,33 @@
     </head>
     <body>
         <div id="app">
-            <img :src="img1" @mouseover="img1 = img1Back" @mouseleave= "img1 = img1" alt="Magic Kingdom at Christmas"/>
-            <img :src="img2" @mouseover="img2 = img2Back" @mouseleave= "img2 = img2" alt="Moosehead Lake in Summer" />
+            <v-hover>
+                <v-img
+                  slot-scope="{ hover }"
+                  v-if="hover"
+                  :src="img1Back"
+                >
+                </v-img>
+                <v-img
+                  v-else
+                  :src="img1"
+                >
+                </v-img>
+            </v-hover>
+
+            <v-hover>
+                <v-img
+                  slot-scope="{ hover }"
+                  v-if="hover"
+                  :src="img2Back"
+                >
+                </v-img>
+                <v-img
+                  v-else
+                  :src="img2"
+                >
+                </v-img>
+            </v-hover>
         </div>
         
         <!--Include Vue-->
