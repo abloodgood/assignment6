@@ -10,17 +10,19 @@
             <div id="image-wrapper">
                 <h1>Hover over the image to change seasons!</h1>
                 <!--if no mouse is hovering, show first image. if mouse goes over the picture, change to second image-->
-                <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
-                <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
+                <img v-if="!hover" @mouseover="hover = !hover; increaseCounter()" :src="img1" alt="Magic Kingdom at Christmas"/>
+                <img v-else @mouseleave="hover = !hover; increaseCounter()" :src="img1Back" alt="Magic Kingdom at Halloween"/>
 
-                <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Winter"/>
-                <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
+                <img v-if="!hover2" @mouseover="hover2 = !hover2; increaseCounter()" :src="img2" alt="Moosehead Lake in Winter"/>
+                <img v-else @mouseleave="hover2 = !hover2; increaseCounter()" :src="img2Back" alt="Moosehead Lake in Fall"/>
 
-                <img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/>
-                <img v-else @mouseleave="hover3 = !hover3" :src="img3Back" alt="London in Summer"/>
+                <img v-if="!hover3" @mouseover="hover3 = !hover3; increaseCounter()" :src="img3" alt="London at Christmas"/>
+                <img v-else @mouseleave="hover3 = !hover3; increaseCounter()" :src="img3Back" alt="London in Summer"/>
 
-                <img v-if="!hover4" @mouseover="hover4 = !hover4" :src="img4" alt="Germany at Christmas"/>
-                <img v-else @mouseleave="hover4 = !hover4" :src="img4Back" alt="Germany in Summer"/>
+                <img v-if="!hover4" @mouseover="hover4 = !hover4; increaseCounter()" :src="img4" alt="Germany at Christmas"/>
+                <img v-else @mouseleave="hover4 = !hover4; increaseCounter()" :src="img4Back" alt="Germany in Summer"/>
+
+                <h1> You have changed images {{ change_counter }} times.</p>
             </div>
         </div>
         
@@ -44,7 +46,13 @@
                     hover : false,
                     hover2 : false,
                     hover3 : false,
-                    hover4 : false
+                    hover4 : false,
+                    change_counter: 0
+                },
+                methods : {
+                    increaseCounter() {
+                        this.change_counter++;
+                    }
                 }
             })
          </script>
