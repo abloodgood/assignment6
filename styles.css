@@ -3,13 +3,14 @@ img {
     width: 600px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border: 2px black;
+    border: 5px black;
 }
 
 #image-wrapper {
     align-items: center; 
     justify-content: center; 
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -22,4 +23,5 @@ body {
     display: flex;
     align-items: center; 
     justify-content: center; 
+    flex-direction: column;
 }
