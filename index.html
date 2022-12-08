@@ -22,7 +22,7 @@
                 <img v-if="!hover4" @mouseover="hover4 = !hover4; increaseCounter()" :src="img4" alt="Germany at Christmas"/>
                 <img v-else @mouseleave="hover4 = !hover4; increaseCounter()" :src="img4Back" alt="Germany in Summer"/>
 
-                <h1> You have changed images {{ change_counter }} times.</p>
+                <h2> You have changed images {{ change_counter }} times.</h2>
             </div>
         </div>
         

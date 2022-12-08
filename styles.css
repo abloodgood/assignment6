@@ -19,3 +19,8 @@ h1 {
     font-weight: bold;
     font-size: 32px;
 }
+
+h2 {
+    background: peachpuff;
+	border-radius: 15px;
+}
