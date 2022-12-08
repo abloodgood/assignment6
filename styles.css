@@ -6,18 +6,21 @@ img {
     border: 5px black;
 }
 
-
+grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 75px;
+    grid-gap: 10px;
+  }
+  
+  grid-item {
+    display: flex;            /* new */
+    align-items: center;      /* new */
+    justify-content: center;  /* new */
+  }
 
 h1 {
     text-align: center;
     font-weight: bold;
     font-size: 32px;
-}
-
-body {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column;
-    margin: auto;
 }
