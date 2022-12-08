@@ -6,12 +6,7 @@ img {
     border: 5px black;
 }
 
-#image-wrapper {
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+
 
 h1 {
     text-align: center;
