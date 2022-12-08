@@ -13,7 +13,7 @@
                 <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
                 <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
 
-                <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Summer"/>
+                <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Winter"/>
                 <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
 
                 <img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/>
@@ -35,7 +35,7 @@
                 data: {
                     img1 : "./Media/MK_Christmas.jpg",
                     img1Back : './Media/MK_Halloween.png',
-                    img2 : './Media/ML_Summer.jpg',
+                    img2 : './Media/ML_Winter.jpg',
                     img2Back : './Media/ML_Fall.jpg',
                     img3 : './Media/london_christmas.jpg',
                     img3Back : './Media/london_summer.jpg',
