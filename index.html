@@ -6,9 +6,9 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Hover over the image to change seasons!</h1>
         <div id="app">
             <div id="image-wrapper">
+                <h1>Hover over the image to change seasons!</h1>
                 <!--if no mouse is hovering, show first image. if mouse goes over the picture, change to second image-->
                 <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
                 <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
