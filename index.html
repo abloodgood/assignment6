@@ -6,22 +6,22 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
+        <h1>Hover over the image to change seasons!</h1>
         <div id="app">
-            <grid-container>
-                <grid-item><h1>Hover over the image to change seasons!</h1></grid-item>
+            <div id="image-wrapper">
                 <!--if no mouse is hovering, show first image. if mouse goes over the picture, change to second image-->
-                <grid-item><img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/></grid-item>
-                <grid-item><img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/></grid-item>
+                <img v-if="!hover" @mouseover="hover = !hover" :src="img1" alt="Magic Kingdom at Christmas"/>
+                <img v-else @mouseleave="hover = !hover" :src="img1Back" alt="Magic Kingdom at Halloween"/>
 
-                <grid-item><img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Winter"/></grid-item>
-                <grid-item><img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/></grid-item>
+                <img v-if="!hover2" @mouseover="hover2 = !hover2" :src="img2" alt="Moosehead Lake in Winter"/>
+                <img v-else @mouseleave="hover2 = !hover2" :src="img2Back" alt="Moosehead Lake in Fall"/>
 
-                <grid-item><img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/></grid-item>
-                <grid-item><img v-else @mouseleave="hover3 = !hover3" :src="img3Back" alt="London in Summer"/></grid-item>
+                <img v-if="!hover3" @mouseover="hover3 = !hover3" :src="img3" alt="London at Christmas"/>
+                <img v-else @mouseleave="hover3 = !hover3" :src="img3Back" alt="London in Summer"/>
 
-                <grid-item><img v-if="!hover4" @mouseover="hover4 = !hover4" :src="img4" alt="Germany at Christmas"/></grid-item>
-                <grid-item><img v-else @mouseleave="hover4 = !hover4" :src="img4Back" alt="Germany in Summer"/></grid-item>
-            </grid-container>
+                <img v-if="!hover4" @mouseover="hover4 = !hover4" :src="img4" alt="Germany at Christmas"/>
+                <img v-else @mouseleave="hover4 = !hover4" :src="img4Back" alt="Germany in Summer"/>
+            </div>
         </div>
         
         <!--Include Vue-->

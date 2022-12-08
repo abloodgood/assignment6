@@ -6,17 +6,11 @@ img {
     border: 5px black;
 }
 
-grid-container {
-    display: grid;
-    grid-auto-rows: 75px;
-    grid-gap: 10px;
-  }
-  
-  grid-item {
-    display: flex;            
-    align-items: center;      
-    justify-content: center;  
-  }
+#image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 h1 {
     text-align: center;
